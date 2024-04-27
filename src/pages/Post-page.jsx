@@ -66,7 +66,7 @@ function PostPage() {
         await setVoteCount(voteCount + 1)
         const { data, error } = await supabase
             .from("posts")
-            .update({ upvotes: voteCount})
+            .update({ upvotes: voteCount + 1})
             .eq('id', post.id)
 
     }
